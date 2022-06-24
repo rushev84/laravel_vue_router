@@ -23,7 +23,7 @@ export default new VueRouter({
             name: 'person.edit'
         },
         {
-            path: '/people/show',
+            path: '/people/:id',
             component: () => import('./components/Person/Show'),
             name: 'person.show'
         },

@@ -53,13 +53,18 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     update: function update() {
+      var _this2 = this;
+
       axios.patch('/api/people/' + this.$route.params.id, {
         name: this.name,
         age: this.age,
         job: this.job
       }).then(function (res) {
         _router__WEBPACK_IMPORTED_MODULE_0__["default"].push({
-          name: 'person.show'
+          name: 'person.show',
+          params: {
+            id: _this2.$route.params.id
+          }
         });
       });
     }
