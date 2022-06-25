@@ -10,7 +10,7 @@
             <input type="text" v-model="job" placeholder="job" class="form-control">
         </div>
         <div class="mb-3">
-            <input @click.prevent="update" type="submit" value="Update" class="btn btn-primary">
+            <input :disabled="!isDisabled" @click.prevent="update" type="submit" value="Update" class="btn btn-primary">
         </div>
     </div>
 </template>
@@ -48,6 +48,12 @@
                     })
             }
 
+        },
+
+        computed: {
+            isDisabled() {
+                return this.name && this.age && this.job
+            }
         }
     }
 </script>
