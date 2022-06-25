@@ -3,9 +3,7 @@ const state = {
 }
 
 const getters = {
-    person: state => {
-        return state.person
-    }
+    person: () => state.person
 }
 
 const mutations = {

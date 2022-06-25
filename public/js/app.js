@@ -5434,7 +5434,7 @@ var state = {
   person: null
 };
 var getters = {
-  person: function person(state) {
+  person: function person() {
     return state.person;
   }
 };
