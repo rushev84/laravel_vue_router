@@ -52,11 +52,11 @@
         methods: {
             getPeople() {
                 axios.get('/api/people/')
-                    .then(res => this.people = res.data)
+                    .then(res => this.people = res.data.data)
             },
 
             deletePerson(id) {
-                axios.delete('/api/people/' + id)
+                axios.delete(`/api/people/${id}`)
                     .then(res => this.getPeople())
             }
         }
